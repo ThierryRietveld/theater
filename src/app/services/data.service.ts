@@ -9,6 +9,23 @@ export class DataService {
 
   constructor(private http:HttpClient) {}
 
+  Login(username,password){
+
+    this.postData = {
+      user: username,
+      pass: password
+    }
+
+    this.http.post('http://localhost:4201/login', this.postData)
+    .subscribe(data => {
+      if (data[0]) {
+        console.log(data);
+      } else {
+        console.log("Login went wrong");
+      }
+    });
+  }
+
   Register(user, first, infix, last, email, pass) {
 
     this.postData = {

@@ -47,7 +47,7 @@ con.connect(function(err) {
 });
 
 app.post('/login', function(req, res){
-    let username = req.body.name;
+    let username = req.body.user;
     let password = req.body.pass;
     con.query("SELECT * FROM Users WHERE `username` = '"+username+"' AND `password` = '"+sha1(password)+"'", function (err, result, fields) {
         if (err) throw err;

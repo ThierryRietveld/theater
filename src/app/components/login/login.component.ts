@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormBuilder} from '@angular/forms';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { DataService } from '../../services/data.service';
 
 @Component({
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   constructor(private dataService:DataService, private fb: FormBuilder) {
     this.lForm = fb.group({
       'username': [null,Validators.required],
-      'password' : [null, Validators.required],
+      'password' : [null, Validators.required]
     });
   }
 
@@ -25,13 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   submitForm(data){
-    console.log(data);
-    if(data.password != data.passwordConfirm){
-      console.log("wachtwoorden niet gelijk");
-      return;
-    }
-    
-    this.dataService.Register(data.username,data.firstname,data.infix,data.lastname,data.email,data.password);
+    this.dataService.Login(data.username,data.password);
   }
 
 }
