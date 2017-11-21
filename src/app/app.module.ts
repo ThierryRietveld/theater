@@ -11,12 +11,14 @@ import { HomeComponent } from './components/home/home.component';
 import { NieuwsComponent } from './components/nieuws/nieuws.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 const appRoutes: Routes = [
   { path: 'nieuws', component: NieuwsComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 
   // { path: 'hero/:id',      component: HeroDetailComponent },
   // {
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     HomeComponent,
     NieuwsComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -3,21 +3,31 @@ import { FormGroup, Validators, FormBuilder} from '@angular/forms';
 import { DataService } from '../../services/data.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
-  lForm:FormGroup;
+  rForm:FormGroup;
   
   username:string;
+  firstname:string;
+  infix:string;
+  lastname:string;
+  email:string;
   password:string;
+  passwordConfirm:string;
 
   constructor(private dataService:DataService, private fb: FormBuilder) {
-    this.lForm = fb.group({
+    this.rForm = fb.group({
       'username': [null,Validators.required],
+      'firstname' : [null, Validators.required],
+      'infix' : [],
+      'lastname' : [null, Validators.required],
+      'email' : [null, Validators.required],
       'password' : [null, Validators.required],
+      'passwordConfirm' : [null, Validators.required]
     });
   }
 
