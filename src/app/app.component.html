@@ -1,6 +1,24 @@
-<h1 *ngIf="homePageImg">Home Page Img</h1>
+<div *ngIf="homePageImg" class="head-img">
 
-<a routerLink="/home">home</a>
-<a routerLink="/nieuws">nieuws</a>
+</div>
+
+<div class="header">
+    <nav class="mainnav">
+        <ul>
+            <li class="first"><a routerLink="/home">home</a></li>
+            <li><a routerLink="/nieuws">nieuws</a></li>
+            <li><a routerLink="/login">login</a></li>
+            <li><a routerLink="/register">register</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+    
+    
+
+
+
+
 
 <router-outlet></router-outlet>
