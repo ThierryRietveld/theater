@@ -8,7 +8,32 @@ html {
     font-family: "futura-book";
 }
 
+body {
+    background-image: url("https://ekko.nl/thumbs/1400x1400c/2017-11/happy-camper-making-of.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
 @font-face {
     font-family: "futura-book";
     src: url("assets/fonts/FuturaStd-Book.woff") format('woff');
+}
+
+@media screen and (max-width: 1025px) {
+    .head-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .head-img {
+        display: none;
+    }
+    .header {
+        width: 792px;
+    }
 }
