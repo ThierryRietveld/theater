@@ -21,7 +21,7 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
 
   // { path: 'hero/:id',      component: HeroDetailComponent },
-  // {
+  // { 
   //   path: 'heroes',
   //   component: HeroListComponent,
   //   data: { title: 'Heroes List' }
